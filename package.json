@@ -4,10 +4,19 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meshach567/code101.git"
   },
   "keywords": [],
-  "author": "meshach567",
+  "author": "",
   "license": "ISC",
-  "type": "module"
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/meshach567/code101/issues"
+  },
+  "homepage": "https://github.com/meshach567/code101#readme"
 }
