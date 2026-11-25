@@ -1,0 +1,13 @@
+{
+  "name": "code101",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "meshach567",
+  "license": "ISC",
+  "type": "module"
+}
