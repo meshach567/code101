@@ -157,3 +157,34 @@ const studentResults = students.map((student) => {
 });
 
 console.log(studentResults);
+
+const searchStudent = (name) => {
+
+    const student = studentResults.find((student) => {
+        return student.name.toLowerCase() === name.toLowerCase();
+    });
+
+    if (student) {
+        console.log("Student Found!");
+        console.log(student);
+    } else {
+        console.log("Student not found!");
+    }
+
+};
+
+searchStudent("Sarah");
+searchStudent("Meshach");
+searchStudent("Peter");
+
+const studentPosition = students.findIndex((student) => {
+    return student.name === "Esther";
+});
+
+if (studentPosition !== -1) {
+    console.log("Student exists at index:", studentPosition);
+} else {
+    console.log("Student does not exist.");
+}
+
+console.log(studentPosition);
