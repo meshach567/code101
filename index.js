@@ -58,3 +58,29 @@ const studentResults = students.map((student) => {
 });
 
 console.log(studentResults);
+
+
+const passedStudents = students.filter((student) => {
+    return student.score >= 60;
+});
+
+console.log(passedStudents);
+
+
+const student = students.find((student) => {
+    return student.id === 3;
+});
+
+console.log(student);
+
+const studentIndex = students.findIndex((student) => {
+    return student.name === "Sarah";
+});
+
+console.log(studentIndex);
+
+const hasExcellentStudent = students.some((student) => {
+    return student.score >= 90;
+});
+
+console.log(hasExcellentStudent);
