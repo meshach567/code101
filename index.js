@@ -47,3 +47,14 @@ console.log(studentNames);
 
 
 // console.log(students);
+
+const studentResults = students.map((student) => {
+    return {
+        name: student.name,
+        grade: student.score >= 80 ? "A" :
+               student.score >= 70 ? "B" :
+               student.score >= 60 ? "C" : "D"
+    };
+});
+
+console.log(studentResults);
