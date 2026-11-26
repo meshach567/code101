@@ -1,45 +1,10 @@
-const students = [
-    {
-        id: 1,
-        name: "Meshach",
-        age: 25,
-        course: "JavaScript",
-        score: 85
-    },
-    {
-        id: 2,
-        name: "John",
-        age: 22,
-        course: "Python",
-        score: 65
-    },
-    {
-        id: 3,
-        name: "David",
-        age: 24,
-        course: "JavaScript",
-        score: 45
-    },
-    {
-        id: 4,
-        name: "Sarah",
-        age: 21,
-        course: "React",
-        score: 90
-    },
-    {
-        id: 5,
-        name: "Esther",
-        age: 23,
-        course: "Python",
-        score: 75
-    }
-];
 // students.forEach((student) => {
 //     console.log(student.name);
 // });
 
-const studentNames = students.map((student) => {
+import { studentss } from "./data";
+
+const studentNames = studentss.map((student) => {
     return student.name;
 });
 
@@ -48,7 +13,7 @@ console.log(studentNames);
 
 // console.log(students);
 
-const studentResults = students.map((student) => {
+const studentResults = studentss.map((student) => {
     return {
         name: student.name,
         grade: student.score >= 80 ? "A" :
@@ -60,27 +25,58 @@ const studentResults = students.map((student) => {
 console.log(studentResults);
 
 
-const passedStudents = students.filter((student) => {
+const passedStudents = studentss.filter((student) => {
     return student.score >= 60;
 });
 
 console.log(passedStudents);
 
 
-const student = students.find((student) => {
+const student = studentss.find((student) => {
     return student.id === 3;
 });
 
 console.log(student);
 
-const studentIndex = students.findIndex((student) => {
+const studentIndex = studentss.findIndex((student) => {
     return student.name === "Sarah";
 });
 
 console.log(studentIndex);
 
-const hasExcellentStudent = students.some((student) => {
+const hasExcellentStudent = studentss.some((student) => {
     return student.score >= 90;
 });
 
 console.log(hasExcellentStudent);
+
+const allStudentsPassed = studentss.every((student) => {
+    return student.score >= 60;
+});
+
+console.log(allStudentsPassed);
+
+const totalScore = studentss.reduce((total, student) => {
+    return total + student.score;
+}, 0);
+
+const averageScore = totalScore / studentss.length;
+
+console.log("Total Score:", totalScore);
+console.log("Average Score:", averageScore);
+
+
+const rankedStudents = [...studentss].sort((a, b) => {
+    return b.score - a.score;
+});
+
+console.log(rankedStudents);
+
+const courses = ["JavaScript", "Python", "React", "Node.js"];
+
+console.log(courses.includes("JavaScript"));
+console.log(courses.includes("PHP"));
+
+const topStudents = studentss.slice(0, 3);
+
+console.log(topStudents);
