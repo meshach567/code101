@@ -119,3 +119,41 @@ students.forEach((student) => {
     `);
 
 });
+
+function getGrade(average) {
+
+    if (average >= 80) {
+        return "A";
+    } else if (average >= 70) {
+        return "B";
+    } else if (average >= 60) {
+        return "C";
+    } else if (average >= 50) {
+        return "D";
+    } else {
+        return "F";
+    }
+
+}
+
+console.log(getGrade(85));
+console.log(getGrade(75));
+console.log(getGrade(65));
+console.log(getGrade(45));
+
+const studentResults = students.map((student) => {
+
+    const total = calculateTotal(student);
+    const average = calculateAverage(student);
+
+    return {
+        id: student.id,
+        name: student.name,
+        total: total,
+        average: Number(average.toFixed(2)),
+        grade: getGrade(average)
+    };
+
+});
+
+console.log(studentResults);
